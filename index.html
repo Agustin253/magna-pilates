@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     :root {
       --blanco-piedra: #FAF3EC;
       --lino: #F3E9DF;
@@ -21,9 +21,9 @@
       --sans: 'IBM Plex Sans', sans-serif;
       --mono: 'IBM Plex Mono', monospace;
     }
-
+ 
     html { scroll-behavior: smooth; }
-
+ 
     body {
       font-family: var(--sans);
       background: var(--blanco-piedra);
@@ -31,7 +31,7 @@
       font-weight: 300;
       overflow-x: hidden;
     }
-
+ 
     /* ── NAVBAR ── */
     nav {
       position: fixed;
@@ -46,7 +46,7 @@
       border-bottom: 1px solid rgba(20,20,20,0.08);
       transition: box-shadow 0.3s;
     }
-
+ 
     .nav-logo {
       font-family: var(--sans);
       font-weight: 600;
@@ -55,13 +55,13 @@
       color: var(--negro);
       text-decoration: none;
     }
-
+ 
     .nav-links {
       display: flex;
       gap: 36px;
       list-style: none;
     }
-
+ 
     .nav-links a {
       font-family: var(--mono);
       font-size: 12px;
@@ -72,9 +72,9 @@
       opacity: 0.6;
       transition: opacity 0.2s;
     }
-
+ 
     .nav-links a:hover { opacity: 1; }
-
+ 
     .nav-cta {
       font-family: var(--mono);
       font-size: 12px;
@@ -86,9 +86,9 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-
+ 
     .nav-cta:hover { background: var(--bordeaux); }
-
+ 
     .nav-hamburger {
       display: none;
       flex-direction: column;
@@ -98,14 +98,14 @@
       border: none;
       padding: 4px;
     }
-
+ 
     .nav-hamburger span {
       display: block;
       width: 24px;
       height: 1.5px;
       background: var(--negro);
     }
-
+ 
     /* ── HERO ── */
     #hero {
       position: relative;
@@ -118,23 +118,23 @@
       text-align: center;
       overflow: hidden;
     }
-
+ 
     .hero-bg-img {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1800&q=85&fit=crop&crop=center');
+      background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1800&q=85&fit=crop&crop=center');
       background-size: cover;
       background-position: center 40%;
       z-index: 0;
     }
-
+ 
     .hero-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to bottom, rgba(20,20,20,0.45) 0%, rgba(20,20,20,0.65) 100%);
       z-index: 1;
     }
-
+ 
     .hero-content {
       position: relative;
       z-index: 2;
@@ -143,7 +143,7 @@
       align-items: center;
       gap: 24px;
     }
-
+ 
     .hero-eyebrow {
       font-family: var(--mono);
       font-size: 11px;
@@ -151,16 +151,16 @@
       text-transform: uppercase;
       color: var(--tostado);
     }
-
+ 
     .hero-logo {
       font-family: var(--sans);
-      font-size: clamp(80px, 14vw, 180px);
+      font-size: clamp(52px, 8vw, 110px);
       font-weight: 600;
       letter-spacing: -0.03em;
       color: var(--blanco-piedra);
       line-height: 0.9;
     }
-
+ 
     .hero-tagline {
       font-family: var(--sans);
       font-size: clamp(15px, 1.8vw, 19px);
@@ -169,13 +169,13 @@
       max-width: 460px;
       line-height: 1.65;
     }
-
+ 
     .hero-actions {
       display: flex;
       gap: 16px;
       margin-top: 8px;
     }
-
+ 
     .btn-primary {
       font-family: var(--mono);
       font-size: 12px;
@@ -187,9 +187,9 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-
+ 
     .btn-primary:hover { background: var(--tostado); }
-
+ 
     .btn-secondary {
       font-family: var(--mono);
       font-size: 12px;
@@ -202,9 +202,9 @@
       text-decoration: none;
       transition: border-color 0.2s;
     }
-
+ 
     .btn-secondary:hover { border-color: var(--blanco-piedra); }
-
+ 
     .hero-scroll {
       position: absolute;
       bottom: 40px;
@@ -216,7 +216,7 @@
       align-items: center;
       gap: 8px;
     }
-
+ 
     .hero-scroll span {
       font-family: var(--mono);
       font-size: 10px;
@@ -224,21 +224,21 @@
       text-transform: uppercase;
       color: rgba(250,243,236,0.4);
     }
-
+ 
     .scroll-line {
       width: 1px;
       height: 40px;
       background: linear-gradient(to bottom, rgba(250,243,236,0.4), transparent);
       animation: scrollPulse 2s ease-in-out infinite;
     }
-
+ 
     @keyframes scrollPulse {
       0%, 100% { opacity: 0.4; }
       50% { opacity: 1; }
     }
-
-
-
+ 
+ 
+ 
     /* ── NOSOTROS ── */
     #nosotros {
       background: var(--lino);
@@ -248,7 +248,7 @@
       align-items: center;
       padding: 100px 48px;
     }
-
+ 
     .section-eyebrow {
       font-family: var(--mono);
       font-size: 11px;
@@ -257,7 +257,7 @@
       color: var(--tostado);
       margin-bottom: 20px;
     }
-
+ 
     .section-title {
       font-family: var(--sans);
       font-size: clamp(36px, 5vw, 64px);
@@ -266,12 +266,12 @@
       line-height: 1.05;
       color: var(--negro);
     }
-
+ 
     .section-title em {
       font-style: italic;
       color: var(--bordeaux);
     }
-
+ 
     .nosotros-text p {
       font-size: 17px;
       line-height: 1.75;
@@ -279,12 +279,12 @@
       margin-top: 32px;
       max-width: 480px;
     }
-
+ 
     .nosotros-values {
       display: flex;
       flex-direction: column;
     }
-
+ 
     .value-item {
       padding: 28px 0;
       border-top: 1px solid rgba(20,20,20,0.1);
@@ -292,9 +292,9 @@
       gap: 24px;
       align-items: flex-start;
     }
-
+ 
     .value-item:last-child { border-bottom: 1px solid rgba(20,20,20,0.1); }
-
+ 
     .value-num {
       font-family: var(--mono);
       font-size: 11px;
@@ -303,19 +303,19 @@
       padding-top: 3px;
       min-width: 24px;
     }
-
+ 
     .value-content h4 {
       font-size: 15px;
       font-weight: 500;
       margin-bottom: 6px;
     }
-
+ 
     .value-content p {
       font-size: 14px;
       line-height: 1.6;
       color: rgba(20,20,20,0.55);
     }
-
+ 
     /* ── FOTO FULL ── */
     .foto-full {
       width: 100%;
@@ -324,7 +324,7 @@
       overflow: hidden;
       position: relative;
     }
-
+ 
     .foto-full img {
       width: 100%;
       height: 100%;
@@ -332,7 +332,7 @@
       object-position: center 30%;
       display: block;
     }
-
+ 
     .foto-full-caption {
       position: absolute;
       bottom: 40px;
@@ -343,33 +343,33 @@
       text-transform: uppercase;
       color: rgba(250,243,236,0.6);
     }
-
+ 
     /* ── CLASES ── */
     #clases {
       background: var(--blanco-piedra);
       padding: 100px 48px;
     }
-
+ 
     .clases-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 60px;
     }
-
+ 
     .clases-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2px;
     }
-
+ 
     .clase-card {
       background: var(--lino);
       overflow: hidden;
       transition: background 0.3s;
       cursor: default;
     }
-
+ 
     .clase-img {
       width: 100%;
       height: 260px;
@@ -378,30 +378,30 @@
       filter: saturate(0.85);
       transition: filter 0.4s, transform 0.5s;
     }
-
+ 
     .clase-card:hover .clase-img {
       filter: saturate(1);
       transform: scale(1.03);
     }
-
+ 
     .clase-img-wrap {
       overflow: hidden;
     }
-
+ 
     .clase-body {
       padding: 36px 28px;
     }
-
+ 
     .clase-card:hover { background: var(--bordeaux); }
-
+ 
     .clase-card:hover .clase-num,
     .clase-card:hover .clase-name,
     .clase-card:hover .clase-desc {
       color: var(--blanco-piedra);
     }
-
+ 
     .clase-card:hover .clase-divider { background: rgba(250,243,236,0.3); }
-
+ 
     .clase-num {
       font-family: var(--mono);
       font-size: 11px;
@@ -410,7 +410,7 @@
       margin-bottom: 16px;
       transition: color 0.3s;
     }
-
+ 
     .clase-name {
       font-family: var(--sans);
       font-size: 26px;
@@ -420,7 +420,7 @@
       margin-bottom: 14px;
       transition: color 0.3s;
     }
-
+ 
     .clase-divider {
       width: 32px;
       height: 1px;
@@ -428,14 +428,14 @@
       margin-bottom: 14px;
       transition: background 0.3s;
     }
-
+ 
     .clase-desc {
       font-size: 14px;
       line-height: 1.65;
       color: rgba(20,20,20,0.6);
       transition: color 0.3s;
     }
-
+ 
     /* ── FOTO SPLIT ── */
     .foto-split {
       display: grid;
@@ -443,12 +443,12 @@
       height: 55vh;
       min-height: 340px;
     }
-
+ 
     .foto-split-item {
       overflow: hidden;
       position: relative;
     }
-
+ 
     .foto-split-item img {
       width: 100%;
       height: 100%;
@@ -457,12 +457,12 @@
       filter: saturate(0.8);
       transition: transform 0.6s, filter 0.4s;
     }
-
+ 
     .foto-split-item:hover img {
       transform: scale(1.04);
       filter: saturate(1);
     }
-
+ 
     .foto-split-label {
       position: absolute;
       bottom: 24px;
@@ -473,20 +473,20 @@
       text-transform: uppercase;
       color: rgba(250,243,236,0.65);
     }
-
+ 
     /* ── MEMBRESÍAS ── */
     #membresias {
       background: var(--negro);
       padding: 100px 48px;
     }
-
+ 
     .membresias-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       margin-bottom: 60px;
     }
-
+ 
     .membresias-header p {
       font-size: 15px;
       color: rgba(250,243,236,0.45);
@@ -494,13 +494,13 @@
       line-height: 1.6;
       text-align: right;
     }
-
+ 
     .membresias-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 2px;
     }
-
+ 
     .membresia-card {
       background: rgba(250,243,236,0.04);
       border: 1px solid rgba(250,243,236,0.07);
@@ -509,17 +509,17 @@
       flex-direction: column;
       transition: background 0.3s, border-color 0.3s;
     }
-
+ 
     .membresia-card.featured {
       background: var(--bordeaux);
       border-color: var(--bordeaux);
     }
-
+ 
     .membresia-card:hover:not(.featured) {
       background: rgba(250,243,236,0.08);
       border-color: rgba(250,243,236,0.14);
     }
-
+ 
     .membresia-tag {
       font-family: var(--mono);
       font-size: 10px;
@@ -528,9 +528,9 @@
       color: var(--tostado);
       margin-bottom: 32px;
     }
-
+ 
     .membresia-card.featured .membresia-tag { color: rgba(250,243,236,0.55); }
-
+ 
     .membresia-name {
       font-family: var(--sans);
       font-size: 28px;
@@ -539,7 +539,7 @@
       letter-spacing: -0.01em;
       margin-bottom: 8px;
     }
-
+ 
     .membresia-creditos {
       font-family: var(--mono);
       font-size: 12px;
@@ -547,9 +547,9 @@
       letter-spacing: 0.05em;
       margin-bottom: 32px;
     }
-
+ 
     .membresia-card.featured .membresia-creditos { color: rgba(250,243,236,0.55); }
-
+ 
     .membresia-features {
       list-style: none;
       display: flex;
@@ -558,7 +558,7 @@
       margin-bottom: 40px;
       flex: 1;
     }
-
+ 
     .membresia-features li {
       font-size: 13px;
       color: rgba(250,243,236,0.45);
@@ -566,18 +566,18 @@
       position: relative;
       line-height: 1.5;
     }
-
+ 
     .membresia-card.featured .membresia-features li { color: rgba(250,243,236,0.8); }
-
+ 
     .membresia-features li::before {
       content: '—';
       position: absolute;
       left: 0;
       color: var(--tostado);
     }
-
+ 
     .membresia-card.featured .membresia-features li::before { color: rgba(250,243,236,0.4); }
-
+ 
     .btn-membresia {
       font-family: var(--mono);
       font-size: 11px;
@@ -590,24 +590,24 @@
       border: 1px solid rgba(250,243,236,0.18);
       color: var(--blanco-piedra);
     }
-
+ 
     .membresia-card.featured .btn-membresia {
       background: var(--blanco-piedra);
       color: var(--bordeaux);
       border-color: var(--blanco-piedra);
     }
-
+ 
     .btn-membresia:hover { background: rgba(250,243,236,0.08); }
     .membresia-card.featured .btn-membresia:hover { background: var(--lino); }
-
+ 
     /* ── HORARIOS ── */
     #horarios {
       background: var(--lino);
       padding: 100px 48px;
     }
-
+ 
     .horarios-header { margin-bottom: 48px; }
-
+ 
     .horarios-nota {
       font-family: var(--mono);
       font-size: 12px;
@@ -615,7 +615,7 @@
       letter-spacing: 0.05em;
       margin-top: 16px;
     }
-
+ 
     .agendapro-embed {
       background: var(--blanco-piedra);
       border: 1px solid rgba(20,20,20,0.08);
@@ -624,7 +624,7 @@
       align-items: center;
       justify-content: center;
     }
-
+ 
     .embed-placeholder {
       text-align: center;
       display: flex;
@@ -632,7 +632,7 @@
       align-items: center;
       gap: 20px;
     }
-
+ 
     .embed-placeholder p {
       font-family: var(--mono);
       font-size: 12px;
@@ -640,7 +640,7 @@
       text-transform: uppercase;
       color: var(--tostado);
     }
-
+ 
     .embed-cta {
       font-family: var(--mono);
       font-size: 12px;
@@ -652,9 +652,9 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-
+ 
     .embed-cta:hover { background: var(--bordeaux); }
-
+ 
     /* ── GALERÍA ── */
     .galeria {
       display: grid;
@@ -662,16 +662,16 @@
       grid-template-rows: 300px 300px;
       gap: 2px;
     }
-
+ 
     .galeria-item {
       overflow: hidden;
       position: relative;
     }
-
+ 
     .galeria-item:first-child {
       grid-row: 1 / 3;
     }
-
+ 
     .galeria-item img {
       width: 100%;
       height: 100%;
@@ -680,12 +680,12 @@
       filter: saturate(0.82);
       transition: transform 0.6s, filter 0.4s;
     }
-
+ 
     .galeria-item:hover img {
       transform: scale(1.05);
       filter: saturate(1);
     }
-
+ 
     /* ── UBICACIÓN ── */
     #ubicacion {
       background: var(--blanco-piedra);
@@ -695,15 +695,15 @@
       align-items: center;
       padding: 100px 48px;
     }
-
+ 
     .ubicacion-info {
       display: flex;
       flex-direction: column;
       gap: 40px;
     }
-
+ 
     .info-item { display: flex; flex-direction: column; gap: 6px; }
-
+ 
     .info-label {
       font-family: var(--mono);
       font-size: 10px;
@@ -711,35 +711,35 @@
       text-transform: uppercase;
       color: var(--tostado);
     }
-
+ 
     .info-value {
       font-size: 18px;
       font-weight: 300;
       color: var(--negro);
       line-height: 1.55;
     }
-
+ 
     .info-value a {
       color: var(--negro);
       text-decoration: none;
       border-bottom: 1px solid rgba(20,20,20,0.2);
       transition: border-color 0.2s;
     }
-
+ 
     .info-value a:hover { border-color: var(--bordeaux); color: var(--bordeaux); }
-
+ 
     .mapa-placeholder {
       height: 460px;
       overflow: hidden;
     }
-
+ 
     .mapa-placeholder iframe {
       width: 100%;
       height: 100%;
       border: none;
       filter: saturate(0.6) contrast(1.1);
     }
-
+ 
     /* ── CTA FINAL ── */
     #cta-final {
       background: var(--bordeaux);
@@ -752,7 +752,7 @@
       position: relative;
       overflow: hidden;
     }
-
+ 
     .cta-bg-text {
       position: absolute;
       font-family: var(--sans);
@@ -764,7 +764,7 @@
       user-select: none;
       white-space: nowrap;
     }
-
+ 
     .cta-title {
       font-family: var(--sans);
       font-size: clamp(40px, 6vw, 80px);
@@ -776,7 +776,7 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     .cta-sub {
       font-size: 16px;
       color: rgba(250,243,236,0.6);
@@ -784,7 +784,7 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     .cta-actions {
       display: flex;
       gap: 16px;
@@ -792,7 +792,7 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     .btn-cta-primary {
       font-family: var(--mono);
       font-size: 12px;
@@ -804,9 +804,9 @@
       text-decoration: none;
       transition: background 0.2s;
     }
-
+ 
     .btn-cta-primary:hover { background: var(--lino); }
-
+ 
     .btn-cta-whatsapp {
       font-family: var(--mono);
       font-size: 12px;
@@ -819,9 +819,9 @@
       text-decoration: none;
       transition: border-color 0.2s;
     }
-
+ 
     .btn-cta-whatsapp:hover { border-color: var(--blanco-piedra); }
-
+ 
     /* ── FOOTER ── */
     footer {
       background: var(--negro);
@@ -830,7 +830,7 @@
       justify-content: space-between;
       align-items: center;
     }
-
+ 
     .footer-logo {
       font-family: var(--sans);
       font-weight: 600;
@@ -838,13 +838,13 @@
       color: var(--blanco-piedra);
       letter-spacing: -0.5px;
     }
-
+ 
     .footer-links {
       display: flex;
       gap: 32px;
       list-style: none;
     }
-
+ 
     .footer-links a {
       font-family: var(--mono);
       font-size: 11px;
@@ -854,15 +854,15 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
+ 
     .footer-links a:hover { color: var(--blanco-piedra); }
-
+ 
     .footer-copy {
       font-family: var(--mono);
       font-size: 11px;
       color: rgba(250,243,236,0.2);
     }
-
+ 
     /* ── MOBILE MENU ── */
     .mobile-menu {
       display: none;
@@ -875,9 +875,9 @@
       justify-content: center;
       gap: 40px;
     }
-
+ 
     .mobile-menu.open { display: flex; }
-
+ 
     .mobile-menu a {
       font-family: var(--sans);
       font-size: 32px;
@@ -886,9 +886,9 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
+ 
     .mobile-menu a:hover { color: var(--tostado); }
-
+ 
     .mobile-close {
       position: absolute;
       top: 24px;
@@ -902,13 +902,13 @@
       border: none;
       cursor: pointer;
     }
-
+ 
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       nav { padding: 0 24px; }
       .nav-links, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
-
+ 
       #nosotros { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px; }
       #clases { padding: 72px 24px; }
       .clases-grid { grid-template-columns: 1fr; }
@@ -923,13 +923,13 @@
       #ubicacion { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px; }
       #cta-final { padding: 80px 24px; }
       .hero-actions, .cta-actions { flex-direction: column; align-items: center; }
-
+ 
       footer { flex-direction: column; gap: 28px; text-align: center; padding: 40px 24px; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
       .foto-split { grid-template-columns: 1fr; height: auto; }
       .foto-split-item { height: 260px; }
     }
-
+ 
     @media (max-width: 580px) {
       .membresias-grid { grid-template-columns: 1fr; }
       .galeria { grid-template-columns: 1fr; grid-template-rows: auto; }
@@ -938,7 +938,7 @@
   </style>
 </head>
 <body>
-
+ 
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" onclick="toggleMenu()">cerrar ✕</button>
@@ -949,7 +949,7 @@
     <a href="#ubicacion" onclick="toggleMenu()">Ubicación</a>
     <a href="https://agendapro.com/site/ar/pilatesdeagustincreo/545575" target="_blank" style="color:var(--tostado);font-size:20px;">Reservar →</a>
   </div>
-
+ 
   <!-- NAVBAR -->
   <nav id="navbar">
     <a href="#" class="nav-logo">magna</a>
@@ -965,7 +965,7 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
-
+ 
   <!-- HERO -->
   <section id="hero">
     <div class="hero-bg-img"></div>
@@ -984,9 +984,9 @@
       <span>scroll</span>
     </div>
   </section>
-
-
-
+ 
+ 
+ 
   <!-- NOSOTROS -->
   <section id="nosotros">
     <div class="nosotros-text">
@@ -1026,13 +1026,13 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- FOTO FULL -->
   <div class="foto-full">
-    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1800&q=85&fit=crop&crop=center" alt="Pilates reformer magna" loading="lazy" />
+    <img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=1800&q=85&fit=crop&crop=center" alt="Pilates reformer magna" loading="lazy" />
     <span class="foto-full-caption">Reformer · Palermo Hollywood</span>
   </div>
-
+ 
   <!-- CLASES -->
   <section id="clases">
     <div class="clases-header">
@@ -1045,7 +1045,7 @@
     <div class="clases-grid">
       <div class="clase-card">
         <div class="clase-img-wrap">
-          <img class="clase-img" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80&fit=crop&crop=center" alt="Reformer Pilates" loading="lazy" />
+          <img class="clase-img" src="https://images.unsplash.com/photo-1561049501-e1f96bdd98fd?w=600&q=80&fit=crop" alt="Reformer Pilates" loading="lazy" />
         </div>
         <div class="clase-body">
           <p class="clase-num">01</p>
@@ -1056,7 +1056,7 @@
       </div>
       <div class="clase-card">
         <div class="clase-img-wrap">
-          <img class="clase-img" src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=800&q=80&fit=crop&crop=center" alt="Pilates Mat" loading="lazy" />
+          <img class="clase-img" src="https://images.unsplash.com/photo-1510894347713-fc3dc6166bac?w=800&q=80&fit=crop&crop=center" alt="Pilates Mat" loading="lazy" />
         </div>
         <div class="clase-body">
           <p class="clase-num">02</p>
@@ -1067,7 +1067,7 @@
       </div>
       <div class="clase-card">
         <div class="clase-img-wrap">
-          <img class="clase-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80&fit=crop&crop=center" alt="Wellness Room" loading="lazy" />
+          <img class="clase-img" src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=900&q=85&fit=crop&crop=center" alt="Wellness Room" loading="lazy" />
         </div>
         <div class="clase-body">
           <p class="clase-num">03</p>
@@ -1078,19 +1078,19 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- FOTO SPLIT -->
   <div class="foto-split">
     <div class="foto-split-item">
-      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=85&fit=crop&crop=center" alt="Pilates comunidad" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=900&q=85&fit=crop&crop=center" alt="Pilates comunidad" loading="lazy" />
       <span class="foto-split-label">Comunidad</span>
     </div>
     <div class="foto-split-item">
-      <img src="https://images.unsplash.com/photo-1540206395-68808572332f?w=900&q=85&fit=crop&crop=top" alt="Wellness magna" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=900&q=85&fit=crop&crop=top" alt="Wellness magna" loading="lazy" />
       <span class="foto-split-label">Wellness</span>
     </div>
   </div>
-
+ 
   <!-- MEMBRESÍAS -->
   <section id="membresias">
     <div class="membresias-header">
@@ -1155,7 +1155,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- HORARIOS -->
   <section id="horarios">
     <div class="horarios-header">
@@ -1170,26 +1170,26 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- GALERÍA -->
   <div class="galeria">
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=85&fit=crop&crop=center" alt="magna pilates" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=900&q=85&fit=crop&crop=center" alt="magna pilates" loading="lazy" />
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=600&q=80&fit=crop&crop=top" alt="magna estudio" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1593164842264-854604db2260?w=600&q=80&fit=crop&crop=top" alt="magna estudio" loading="lazy" />
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=600&q=80&fit=crop" alt="magna wellness" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1518310952931-b1de897abd40?w=600&q=80&fit=crop" alt="magna wellness" loading="lazy" />
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=600&q=80&fit=crop" alt="magna comunidad" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1617957689233-207e3cd3c610?w=600&q=80&fit=crop" alt="magna comunidad" loading="lazy" />
     </div>
     <div class="galeria-item">
-      <img src="https://images.unsplash.com/photo-1616279969965-e9eba7f1a03d?w=600&q=80&fit=crop" alt="magna mat pilates" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1561049501-e1f96bdd98fd?w=600&q=80&fit=crop" alt="magna mat pilates" loading="lazy" />
     </div>
   </div>
-
+ 
   <!-- UBICACIÓN -->
   <section id="ubicacion">
     <div class="ubicacion-info">
@@ -1226,7 +1226,7 @@
       </iframe>
     </div>
   </section>
-
+ 
   <!-- CTA FINAL -->
   <section id="cta-final">
     <span class="cta-bg-text">magna</span>
@@ -1238,7 +1238,7 @@
       <a href="https://wa.me/5491100000000" target="_blank" class="btn-cta-whatsapp">WhatsApp</a>
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <span class="footer-logo">magna</span>
@@ -1251,12 +1251,12 @@
     </ul>
     <span class="footer-copy">© 2026 magna — Palermo Hollywood</span>
   </footer>
-
+ 
   <script>
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('open');
     }
-
+ 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -1269,7 +1269,7 @@
         }
       });
     });
-
+ 
     window.addEventListener('scroll', () => {
       const nav = document.getElementById('navbar');
       nav.style.boxShadow = window.scrollY > 60
