@@ -349,7 +349,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 20%;
       display: block;
     }
 
@@ -678,8 +678,8 @@
     /* ── GALERÍA ── */
     .galeria {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: 300px 300px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 340px 340px;
       gap: 2px;
     }
 
@@ -690,12 +690,14 @@
 
     .galeria-item:first-child {
       grid-row: 1 / 3;
+      grid-column: 1 / 2;
     }
 
     .galeria-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center center;
       display: block;
       filter: saturate(0.82);
       transition: transform 0.6s, filter 0.4s;
@@ -1198,19 +1200,19 @@
   <!-- GALERÍA -->
   <div class="galeria">
     <div class="galeria-item">
-      <img src="Post3.png" alt="magna membership" loading="lazy" />
+      <img src="Post3.png" alt="magna membership" loading="lazy" style="object-position: center top;" />
     </div>
     <div class="galeria-item">
       <img src="Toallas.png" alt="magna toallas" loading="lazy" />
     </div>
     <div class="galeria-item">
-      <img src="Mun_equera.png" alt="magna pilates" loading="lazy" />
-    </div>
-    <div class="galeria-item">
-      <img src="Vasitos%20Caf%C3%A9.png" alt="magna café" loading="lazy" />
-    </div>
-    <div class="galeria-item">
       <img src="Cartel.png" alt="magna cartel" loading="lazy" />
+    </div>
+    <div class="galeria-item">
+      <img src="Mun_equera.png" alt="magna pilates" loading="lazy" style="object-position: center 20%;" />
+    </div>
+    <div class="galeria-item">
+      <img src="Totebag.jpg" alt="magna totebag" loading="lazy" />
     </div>
   </div>
 
