@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>magna — pilates studio</title>
   <meta name="description" content="Reformer Pilates & Wellness Room en Palermo Hollywood, Buenos Aires. Work on yourself daily." />
+  <link rel="icon" type="image/png" href="icono.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
@@ -48,12 +49,31 @@
     }
 
     .nav-logo {
-      font-family: var(--sans);
-      font-weight: 600;
-      font-size: 22px;
-      letter-spacing: -0.5px;
-      color: var(--negro);
       text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo-img {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+
+    .hero-logo { line-height: 1; }
+
+    .hero-logo-img {
+      height: clamp(40px, 7vw, 90px);
+      width: auto;
+      display: block;
+    }
+
+    .footer-logo { display: flex; align-items: center; }
+
+    .footer-logo-img {
+      height: 20px;
+      width: auto;
+      display: block;
     }
 
     .nav-links {
@@ -952,7 +972,9 @@
 
   <!-- NAVBAR -->
   <nav id="navbar">
-    <a href="#" class="nav-logo">magna</a>
+    <a href="#" class="nav-logo">
+      <img src="logo-negro.png" alt="magna" class="nav-logo-img" />
+    </a>
     <ul class="nav-links">
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#clases">Clases</a></li>
@@ -972,7 +994,9 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">Pilates Studio · Palermo Hollywood · Est. 2026</p>
-      <h1 class="hero-logo">magna</h1>
+      <h1 class="hero-logo">
+        <img src="logo-blanco.png" alt="magna" class="hero-logo-img" />
+      </h1>
       <p class="hero-tagline">El lugar donde armás tu rutina. Reformer, wellness y comunidad en un solo espacio.</p>
       <div class="hero-actions">
         <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" class="btn-primary">Reservar clase</a>
@@ -1241,7 +1265,9 @@
 
   <!-- FOOTER -->
   <footer>
-    <span class="footer-logo">magna</span>
+    <span class="footer-logo">
+      <img src="logo-blanco.png" alt="magna" class="footer-logo-img" />
+    </span>
     <ul class="footer-links">
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#clases">Clases</a></li>
