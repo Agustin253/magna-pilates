@@ -17,7 +17,6 @@
       --lino: #F3E9DF;
       --tostado: #BFAEA1;
       --bordeaux: #64303D;
-      --bordeaux-intenso: #4A1220;
       --marron: #4C382C;
       --negro: #141414;
       --sans: 'IBM Plex Sans', sans-serif;
@@ -319,8 +318,7 @@
     .value-num {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--bordeaux-intenso);
-      font-weight: 500;
+      color: var(--tostado);
       letter-spacing: 0.1em;
       padding-top: 3px;
       min-width: 24px;
@@ -896,11 +894,11 @@
     <div class="hero-bg-img"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Reformer Pilates & Wellness Room.</p>
+      <p class="hero-eyebrow">Pilates Studio · Palermo Hollywood · Est. 2026</p>
       <h1 class="hero-logo">
         <img src="logo-blanco.png" alt="magna" class="hero-logo-img" />
       </h1>
-      <p class="hero-tagline" style="font-size: 14px; max-width: 340px;">Work on yourself daily.</p>
+      <p class="hero-tagline">Reformer Pilates & Wellness Room.<br>Work on yourself daily.</p>
       <div class="hero-actions">
         <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" class="btn-primary">Reservar clase</a>
         <a href="#membresias" class="btn-secondary">Ver membresías</a>
@@ -1166,18 +1164,6 @@
         ? '0 1px 24px rgba(20,20,20,0.09)'
         : 'none';
     });
-
-    // Sincroniza el ancho de los párrafos de "Nosotros" con el ancho real
-    // del título, para que el texto nunca sobresalga de esa línea.
-    function syncNosotrosWidth() {
-      const title = document.querySelector('#nosotros .section-title');
-      const paras = document.querySelectorAll('#nosotros .nosotros-text p');
-      if (!title || !paras.length) return;
-      const w = title.getBoundingClientRect().width;
-      paras.forEach(p => { p.style.maxWidth = w + 'px'; });
-    }
-    window.addEventListener('load', syncNosotrosWidth);
-    window.addEventListener('resize', syncNosotrosWidth);
   </script>
 </body>
 </html>
