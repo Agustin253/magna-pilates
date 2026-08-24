@@ -17,6 +17,7 @@
       --lino: #F3E9DF;
       --tostado: #BFAEA1;
       --bordeaux: #64303D;
+      --bordeaux-intenso: #4A1220;
       --marron: #4C382C;
       --negro: #141414;
       --sans: 'IBM Plex Sans', sans-serif;
@@ -54,8 +55,8 @@
       align-items: center;
     }
 
-    .nav-logo-img {
-      height: 22px;
+    .nav-logo-icon {
+      height: 24px;
       width: auto;
       display: block;
     }
@@ -318,7 +319,8 @@
     .value-num {
       font-family: var(--mono);
       font-size: 11px;
-      color: var(--tostado);
+      color: var(--bordeaux-intenso);
+      font-weight: 500;
       letter-spacing: 0.1em;
       padding-top: 3px;
       min-width: 24px;
@@ -334,34 +336,6 @@
       font-size: 14px;
       line-height: 1.6;
       color: rgba(20,20,20,0.55);
-    }
-
-    /* ── FOTO FULL ── */
-    .foto-full {
-      width: 100%;
-      height: 70vh;
-      min-height: 400px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .foto-full img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-    }
-
-    .foto-full-caption {
-      position: absolute;
-      bottom: 40px;
-      right: 48px;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(250,243,236,0.6);
     }
 
     /* ── CLASES ── */
@@ -454,44 +428,6 @@
       line-height: 1.65;
       color: rgba(20,20,20,0.6);
       transition: color 0.3s;
-    }
-
-    /* ── FOTO SPLIT ── */
-    .foto-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      height: 55vh;
-      min-height: 340px;
-    }
-
-    .foto-split-item {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .foto-split-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: saturate(0.8);
-      transition: transform 0.6s, filter 0.4s;
-    }
-
-    .foto-split-item:hover img {
-      transform: scale(1.04);
-      filter: saturate(1);
-    }
-
-    .foto-split-label {
-      position: absolute;
-      bottom: 24px;
-      left: 28px;
-      font-family: var(--mono);
-      font-size: 10px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(250,243,236,0.65);
     }
 
     /* ── MEMBRESÍAS ── */
@@ -675,48 +611,18 @@
 
     .embed-cta:hover { background: var(--bordeaux); }
 
-    /* ── GALERÍA ── */
-    .galeria {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 340px 340px;
-      gap: 2px;
-    }
-
-    .galeria-item {
-      overflow: hidden;
-      position: relative;
-    }
-
-    .galeria-item:first-child {
-      grid-row: 1 / 3;
-      grid-column: 1 / 2;
-    }
-
-    .galeria-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-      filter: saturate(0.82);
-      transition: transform 0.6s, filter 0.4s;
-    }
-
-    .galeria-item:hover img {
-      transform: scale(1.05);
-      filter: saturate(1);
-    }
-
-    /* ── UBICACIÓN ── */
+    /* ── UBICACIÓN / CONTACTO (como cierre, estilo footer) ── */
     #ubicacion {
-      background: var(--blanco-piedra);
+      background: var(--negro);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
       padding: 100px 48px;
     }
+
+    #ubicacion .section-title { color: var(--blanco-piedra); }
+    #ubicacion .section-title em { color: var(--tostado); }
 
     .ubicacion-info {
       display: flex;
@@ -737,18 +643,18 @@
     .info-value {
       font-size: 18px;
       font-weight: 300;
-      color: var(--negro);
+      color: var(--blanco-piedra);
       line-height: 1.55;
     }
 
     .info-value a {
-      color: var(--negro);
+      color: var(--blanco-piedra);
       text-decoration: none;
-      border-bottom: 1px solid rgba(20,20,20,0.2);
+      border-bottom: 1px solid rgba(250,243,236,0.25);
       transition: border-color 0.2s;
     }
 
-    .info-value a:hover { border-color: var(--bordeaux); color: var(--bordeaux); }
+    .info-value a:hover { border-color: var(--tostado); color: var(--tostado); }
 
     .mapa-placeholder {
       height: 460px;
@@ -759,7 +665,7 @@
       width: 100%;
       height: 100%;
       border: none;
-      filter: saturate(0.6) contrast(1.1);
+      filter: saturate(0.6) contrast(1.1) grayscale(0.15);
     }
 
     /* ── CTA FINAL ── */
@@ -847,10 +753,11 @@
     /* ── FOOTER ── */
     footer {
       background: var(--negro);
-      padding: 56px 48px;
+      padding: 32px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border-top: 1px solid rgba(250,243,236,0.08);
     }
 
     .footer-logo {
@@ -940,22 +847,16 @@
       .membresias-header { flex-direction: column; gap: 16px; align-items: flex-start; }
       .membresias-header p { text-align: left; }
       #horarios { padding: 72px 24px; }
-      .galeria { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 220px 220px; }
-      .galeria-item:first-child { grid-row: auto; }
       #ubicacion { grid-template-columns: 1fr; gap: 48px; padding: 72px 24px; }
       #cta-final { padding: 80px 24px; }
       .hero-actions, .cta-actions { flex-direction: column; align-items: center; }
 
       footer { flex-direction: column; gap: 28px; text-align: center; padding: 40px 24px; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
-      .foto-split { grid-template-columns: 1fr; height: auto; }
-      .foto-split-item { height: 260px; }
     }
 
     @media (max-width: 580px) {
       .membresias-grid { grid-template-columns: 1fr; }
-      .galeria { grid-template-columns: 1fr; grid-template-rows: auto; }
-      .galeria-item { height: 240px; }
     }
   </style>
 </head>
@@ -968,21 +869,21 @@
     <a href="#clases" onclick="toggleMenu()">Clases</a>
     <a href="#membresias" onclick="toggleMenu()">Membresías</a>
     <a href="#horarios" onclick="toggleMenu()">Horarios</a>
-    <a href="#ubicacion" onclick="toggleMenu()">Ubicación</a>
+    <a href="#ubicacion" onclick="toggleMenu()">Contacto</a>
     <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" style="color:var(--tostado);font-size:20px;">Reservar →</a>
   </div>
 
   <!-- NAVBAR -->
   <nav id="navbar">
     <a href="#" class="nav-logo">
-      <img src="logo-negro.png" alt="magna" class="nav-logo-img" />
+      <img src="icono-magna-negro-carbon.png" alt="magna" class="nav-logo-icon" />
     </a>
     <ul class="nav-links">
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#clases">Clases</a></li>
       <li><a href="#membresias">Membresías</a></li>
       <li><a href="#horarios">Horarios</a></li>
-      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#ubicacion">Contacto</a></li>
     </ul>
     <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" class="nav-cta">Reservar</a>
     <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">
@@ -995,11 +896,11 @@
     <div class="hero-bg-img"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Pilates Studio · Palermo Hollywood · Est. 2026</p>
+      <p class="hero-eyebrow">Reformer Pilates & Wellness Room.</p>
       <h1 class="hero-logo">
         <img src="logo-blanco.png" alt="magna" class="hero-logo-img" />
       </h1>
-      <p class="hero-tagline">Reformer Pilates & Wellness Room.<br>Work on yourself daily.</p>
+      <p class="hero-tagline" style="font-size: 14px; max-width: 340px;">Work on yourself daily.</p>
       <div class="hero-actions">
         <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" class="btn-primary">Reservar clase</a>
         <a href="#membresias" class="btn-secondary">Ver membresías</a>
@@ -1010,8 +911,6 @@
       <span>scroll</span>
     </div>
   </section>
-
-
 
   <!-- NOSOTROS -->
   <section id="nosotros">
@@ -1052,12 +951,6 @@
       </div>
     </div>
   </section>
-
-  <!-- FOTO FULL -->
-  <div class="foto-full">
-    <img src="Post1.png" alt="magna pilates" loading="lazy" />
-    <span class="foto-full-caption">Reformer · Palermo Hollywood</span>
-  </div>
 
   <!-- CLASES -->
   <section id="clases">
@@ -1104,18 +997,6 @@
       </div>
     </div>
   </section>
-
-  <!-- FOTO SPLIT -->
-  <div class="foto-split">
-    <div class="foto-split-item">
-      <img src="Ventanal.png" alt="magna pilates fachada" loading="lazy" />
-      <span class="foto-split-label">Palermo Hollywood</span>
-    </div>
-    <div class="foto-split-item">
-      <img src="Post2.png" alt="magna espacio" loading="lazy" />
-      <span class="foto-split-label">El espacio</span>
-    </div>
-  </div>
 
   <!-- MEMBRESÍAS -->
   <section id="membresias">
@@ -1197,26 +1078,19 @@
     </div>
   </section>
 
-  <!-- GALERÍA -->
-  <div class="galeria">
-    <div class="galeria-item">
-      <img src="Post3.png" alt="magna membership" loading="lazy" style="object-position: center top;" />
+  <!-- CTA FINAL -->
+  <section id="cta-final">
+    <span class="cta-bg-text">magna</span>
+    <p class="section-eyebrow" style="color:rgba(250,243,236,0.45);">Comenzá hoy</p>
+    <h2 class="cta-title">Tu primer clase,<br>sin compromiso.</h2>
+    <p class="cta-sub">Escribinos o reservá directamente online.</p>
+    <div class="cta-actions">
+      <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" class="btn-cta-primary">Reservar clase</a>
+      <a href="https://wa.me/5491100000000" target="_blank" class="btn-cta-whatsapp">WhatsApp</a>
     </div>
-    <div class="galeria-item">
-      <img src="Toallas.png" alt="magna toallas" loading="lazy" />
-    </div>
-    <div class="galeria-item">
-      <img src="Cartel.png" alt="magna cartel" loading="lazy" />
-    </div>
-    <div class="galeria-item">
-      <img src="Mun_equera.png" alt="magna pilates" loading="lazy" style="object-position: center 20%;" />
-    </div>
-    <div class="galeria-item">
-      <img src="Totebag.jpg" alt="magna totebag" loading="lazy" />
-    </div>
-  </div>
+  </section>
 
-  <!-- UBICACIÓN -->
+  <!-- UBICACIÓN / CONTACTO (cierre de página, estilo footer) -->
   <section id="ubicacion">
     <div class="ubicacion-info">
       <div>
@@ -1253,18 +1127,6 @@
     </div>
   </section>
 
-  <!-- CTA FINAL -->
-  <section id="cta-final">
-    <span class="cta-bg-text">magna</span>
-    <p class="section-eyebrow" style="color:rgba(250,243,236,0.45);">Comenzá hoy</p>
-    <h2 class="cta-title">Tu primer clase,<br>sin compromiso.</h2>
-    <p class="cta-sub">Escribinos o reservá directamente online.</p>
-    <div class="cta-actions">
-      <a href="https://agendapro.com/site/ar/magna/545575" target="_blank" class="btn-cta-primary">Reservar clase</a>
-      <a href="https://wa.me/5491100000000" target="_blank" class="btn-cta-whatsapp">WhatsApp</a>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
     <span class="footer-logo">
@@ -1274,7 +1136,7 @@
       <li><a href="#nosotros">Nosotros</a></li>
       <li><a href="#clases">Clases</a></li>
       <li><a href="#membresias">Membresías</a></li>
-      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#ubicacion">Contacto</a></li>
       <li><a href="https://instagram.com/espaciomagna" target="_blank">Instagram</a></li>
     </ul>
     <span class="footer-copy">© 2026 magna — Palermo Hollywood</span>
@@ -1304,6 +1166,18 @@
         ? '0 1px 24px rgba(20,20,20,0.09)'
         : 'none';
     });
+
+    // Sincroniza el ancho de los párrafos de "Nosotros" con el ancho real
+    // del título, para que el texto nunca sobresalga de esa línea.
+    function syncNosotrosWidth() {
+      const title = document.querySelector('#nosotros .section-title');
+      const paras = document.querySelectorAll('#nosotros .nosotros-text p');
+      if (!title || !paras.length) return;
+      const w = title.getBoundingClientRect().width;
+      paras.forEach(p => { p.style.maxWidth = w + 'px'; });
+    }
+    window.addEventListener('load', syncNosotrosWidth);
+    window.addEventListener('resize', syncNosotrosWidth);
   </script>
 </body>
 </html>
